@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>11</java.version>
+        <some.custom.props>foo bar</some.custom.props>
     </properties>
 
     <dependencies>
@@ -58,6 +59,18 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <executions>
+                    <execution>
+                        <id>build-info-goal</id>
+                        <goals>
+                            <goal>build-info</goal>
+                        </goals>
+                        <configuration>
+                            <additionalProperties>
+                                <java.version>${java.version}</java.version>
+                                <some.custom.props>${some.custom.props}</some.custom.props>
+                            </additionalProperties>
+                        </configuration>
+                    </execution>
                     <execution>
                         <id>pre-it</id>
                         <goals>
