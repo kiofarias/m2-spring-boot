@@ -1,4 +1,4 @@
-package kiofarias.springframework.m2springboot;
+package kiofarias.springframework.springboot.models.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
